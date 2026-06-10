@@ -6252,6 +6252,12 @@ window.addEventListener('load', function() {
   buildLoginScreen();
   localStorage.removeItem('pickflow_state');
   listenToFirebase();
+
+  document.title = '[TEST] ' + document.title;
+  var b = document.createElement('div');
+  b.textContent = 'TEST ENVIRONMENT';
+  b.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#d97706;color:#fff;text-align:center;font:bold 11px monospace;letter-spacing:2px;padding:3px;z-index:99999';
+  document.body.appendChild(b);
 });
 
 </script>
