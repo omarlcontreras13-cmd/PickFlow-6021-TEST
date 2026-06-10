@@ -6253,11 +6253,13 @@ window.addEventListener('load', function() {
   localStorage.removeItem('pickflow_state');
   listenToFirebase();
 
+  // ── TEST ENVIRONMENT BANNER (top) ──────────────────────────────
   document.title = '[TEST] ' + document.title;
   var b = document.createElement('div');
   b.textContent = 'TEST ENVIRONMENT';
-  b.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#d97706;color:#fff;text-align:center;font:bold 11px monospace;letter-spacing:2px;padding:3px;z-index:99999';
+  b.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#d97706;color:#fff;text-align:center;font:bold 13px monospace;letter-spacing:3px;padding:6px;z-index:2147483647';
   document.body.appendChild(b);
+  document.body.style.paddingTop = '30px';   // push app down so banner doesn't cover the header
 });
 
 </script>
